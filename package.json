@@ -1,6 +1,6 @@
 {
     "name": "kiat-steam",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Lets you interface with Steam without running an actual Steam client",
     "author": "Hongarc <anhong12121997t@gmail.com>",
     "maintainers": {
@@ -29,11 +29,10 @@
         "resource": "git clone https://github.com/seishun/node-steam-resources.git steam-resources"
     },
     "dependencies": {
-        "adm-zip": "^0.4",
-        "buffer-crc32": "^0.2",
-        "bytebuffer": "^5.0",
-        "protobufjs": "^4.1",
-        "steam-crypto": "^0.0"
+        "adm-zip": "^0.4.11",
+        "buffer-crc32": "^0.2.13",
+        "bytebuffer": "^5.0.1",
+        "steam-crypto": "^0.0.1"
     },
     "devDependencies": {
         "eslint": "^4.19.1"

@@ -1,6 +1,10 @@
 # Steam for Node.js
 
-[![NPM version](https://img.shields.io/npm/v/kiat-steam.svg)](https://npmjs.org/package/kiat-steam "View this project  on NPM") [![License](https://img.shields.io/github/license/Hongarc/kiat-steam.svg)](LICENSE)[![Build Status](https://travis-ci.org/Hongarc/kiat-steam.svg?branch=master)](https://travis-ci.org/Hongarc/kiat-steam)
+[![NPM version](https://img.shields.io/npm/v/kiat-steam.svg)](https://npmjs.org/package/kiat-steam "View this project  on NPM")
+[![License](https://img.shields.io/github/license/Hongarc/kiat-steam.svg)](LICENSE)
+[![Build Status](https://travis-ci.org/Hongarc/kiat-steam.svg?branch=master)](https://travis-ci.org/Hongarc/kiat-steam)
+[![Dependency Status](https://david-dm.org/Hongarc/kiat-steam.svg)](https://david-dm.org/Hongarc/kiat-steam)
+[![DevDependency Status](https://david-dm.org/Hongarc/kiat-steam/dev-status.svg)](https://david-dm.org/Hongarc/kiat-steam?type=dev)
 
 This is a Node.js port of [SteamKit2](https://github.com/SteamRE/SteamKit) (I re-make from [node-steam](https://github.com/seishun/node-steam)). It lets you 
 interface with Steam without running an actual Steam client. Could be used to run an autonomous chat/trade bot.
