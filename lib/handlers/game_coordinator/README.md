@@ -3,7 +3,7 @@
 This is a handler for sending and receiving Game Coordinator messages. Initialize it by passing a SteamClient instance and an AppID to the constructor.
 
 ```js
-var steamGameCoordinator = new Steam.SteamGameCoordinator(steamClient, 570);
+const steamGameCoordinator = new Steam.SteamGameCoordinator(steamClient, 570);
 ```
 
 It's intended to have the same API as SteamClient's 'message'/send except it uses a different `CMsgProtoBufHeader`.

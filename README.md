@@ -1,17 +1,14 @@
 # Steam for Node.js
 
-[![NPM version](https://img.shields.io/npm/v/steam.svg)](https://npmjs.org/package/steam "View this project on NPM")
-[![Dependency Status](https://img.shields.io/david/seishun/node-steam.svg)](https://david-dm.org/seishun/node-steam)
-[![PayPal donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Y83UZQZBJXEXQ&item_name=node%2dsteam&currency_code=EUR
- "Donate once-off to this project using PayPal")
+[![NPM version](https://img.shields.io/npm/v/kiat-steam.svg)](https://npmjs.org/package/kiat-steam "View this project  on NPM") [![License](https://img.shields.io/github/license/Hongarc/kiat-steam.svg)](README.md)
 
-This is a Node.js port of [SteamKit2](https://github.com/SteamRE/SteamKit). It lets you interface with Steam without running an actual Steam client. Could be used to run an autonomous chat/trade bot.
-
+This is a Node.js port of [SteamKit2](https://github.com/SteamRE/SteamKit) (I re-make from [node-steam](https://github.com/seishun/node-steam)). It lets you 
+interface with Steam without running an actual Steam client. Could be used to run an autonomous chat/trade bot.
 
 # Installation
 
 ```
-npm install steam
+npm install kiat-steam
 ```
 
 Note: when installing from git, you have to additionally run `npm install` inside `steam/node_modules/steam-resources` to run the `prepublish` script (see [npm/npm#3055](https://github.com/npm/npm/issues/3055)). It pulls Steam resources (Protobufs and SteamLanguage) from SteamKit2 and requires `svn`.
@@ -21,7 +18,7 @@ Note: when installing from git, you have to additionally run `npm install` insid
 # Usage
 First, `require` this module.
 ```js
-var Steam = require('steam');
+const Steam = require('kiat-steam');
 ```
 `Steam` is now a namespace object containing:
 * [SteamClient class](#steamclient)
@@ -32,8 +29,8 @@ var Steam = require('steam');
 Then you'll want to create an instance of SteamClient and any handlers you need, call [SteamClient#connect](#connect) and assign event listeners.
 
 ```js
-var steamClient = new Steam.SteamClient();
-var steamUser = new Steam.SteamUser(steamClient);
+const steamClient = new Steam.SteamClient();
+const steamUser = new Steam.SteamUser(steamClient);
 steamClient.connect();
 steamClient.on('connected', function() {
   steamUser.logOn({

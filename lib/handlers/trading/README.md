@@ -3,7 +3,7 @@
 This is a handler for sending and receiving trade requests. Initialize it by passing a SteamClient instance to the constructor.
 
 ```js
-var steamTrading = new Steam.SteamTrading(steamClient);
+const steamTrading = new Steam.SteamTrading(steamClient);
 ```
 
 ## Methods

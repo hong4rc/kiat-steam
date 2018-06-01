@@ -3,7 +3,7 @@
 This is a handler for sending and receiving Rich Presence messages. Initialize it by passing a SteamClient instance and an AppID to the constructor.
 
 ```js
-var steamRichPresence = new Steam.SteamRichPresence(steamClient, 570);
+const steamRichPresence = new Steam.SteamRichPresence(steamClient, 570);
 ```
 
 ## Methods

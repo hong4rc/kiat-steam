@@ -3,7 +3,7 @@
 This is a handler for sending and receiving unified messages. Initialize it by passing a SteamClient instance and a service name to the constructor.
 
 ```js
-var steamUnifiedMessages = new Steam.SteamUnifiedMessages(steamClient, 'Parental');
+const steamUnifiedMessages = new Steam.SteamUnifiedMessages(steamClient, 'Parental');
 ```
 
 ## Methods

@@ -3,7 +3,7 @@
 This is a handler for user account-related functionality. Initialize it by passing a SteamClient instance to the constructor.
 
 ```js
-var steamUser = new Steam.SteamUser(steamClient);
+const steamUser = new Steam.SteamUser(steamClient);
 ```
 
 ## Methods
