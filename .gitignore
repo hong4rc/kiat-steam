@@ -9,4 +9,9 @@ test.js
 
 #Yarn
 yarn.lock
+
+#Steam resources
 steam-resources/
+
+#Gulp build
+dist/
