@@ -9,6 +9,7 @@ test.js
 
 #Yarn
 yarn.lock
+yarn-error.log
 
 #Steam resources
 steam-resources/
