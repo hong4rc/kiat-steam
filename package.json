@@ -19,7 +19,7 @@
         "steam-resources/**.steamd",
         "steam-resources/**.js"
     ],
-    "main": "./dist/steam_client",
+    "main": "./dist/index",
     "repository": {
         "type": "git",
         "url": "https://github.com/Hongarc/kiat-steam.git"
