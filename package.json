@@ -1,6 +1,6 @@
 {
     "name": "kiat-steam",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "Lets you interface with Steam without running an actual Steam client",
     "author": "Hongarc <anhong12121997t@gmail.com>",
     "maintainers": {
@@ -14,7 +14,7 @@
     "bugs": "https://github.com/Hongarc/kiat-steam/issues",
     "license": "MIT",
     "files": [
-        "lib/**.js",
+        "dist/**.js",
         "steam-resources/**.proto",
         "steam-resources/**.steamd",
         "steam-resources/**.js"
