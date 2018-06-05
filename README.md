@@ -76,12 +76,12 @@ See the [wiki](https://github.com/seishun/node-steam/wiki/Protobufs) for descrip
 
 Most of the API is provided by handler classes that internally send and receive low-level client messages using ['message'/send](#messagesend):
 
-* [SteamUser](lib/handlers/user) - user account-related functionality, including logon.
-* [SteamFriends](lib/handlers/friends) - Community functionality, such as chats and friend messages.
-* [SteamTrading](lib/handlers/trading) - sending and receiving trade requests. Not to be confused with trade offers.
-* [SteamGameCoordinator](lib/handlers/game_coordinator) - sending and receiving Game Coordinator messages.
-* [SteamUnifiedMessages](lib/handlers/unified_messages) - sending and receiving unified messages.
-* [SteamRichPresence](lib/handlers/rich_presence) - sending and receiving Rich Presence messages.
+* [SteamUser](lib/handlers/User) - user account-related functionality, including logon.
+* [SteamFriends](lib/handlers/Friends) - Community functionality, such as chats and friend messages.
+* [SteamTrading](lib/handlers/Trading) - sending and receiving trade requests. Not to be confused with trade offers.
+* [SteamGameCoordinator](lib/handlers/GameCoordinator) - sending and receiving Game Coordinator messages.
+* [SteamUnifiedMessages](lib/handlers/UnifiedMessages) - sending and receiving unified messages.
+* [SteamRichPresence](lib/handlers/RichPresence) - sending and receiving Rich Presence messages.
 
 If you think some unimplemented functionality belongs in one of the existing handlers, feel free to submit an issue to discuss it.
 
@@ -95,7 +95,7 @@ A boolean that indicates whether you are currently connected and the encryption 
 
 ### loggedOn
 
-A boolean that indicates whether you are currently logged on. Calling any handler methods other than [SteamUser#logOn](lib/handlers/user#logonlogondetails) is only allowed while logged on.
+A boolean that indicates whether you are currently logged on. Calling any handler methods other than [SteamUser#logOn](lib/handlers/User#logonlogondetails) is only allowed while logged on.
 
 ### sessionID
 
@@ -103,7 +103,7 @@ Your session ID while logged on, otherwise unspecified. (Note: this has nothing 
 
 ### steamID
 
-Your own SteamID while logged on, otherwise unspecified. Must be set to a valid initial value before sending a logon message ([SteamUser#logOn](lib/handlers/user#logonlogondetails) does that for you).
+Your own SteamID while logged on, otherwise unspecified. Must be set to a valid initial value before sending a logon message ([SteamUser#logOn](lib/handlers/User#logonlogondetails) does that for you).
 
 ## Methods
 
@@ -126,7 +126,7 @@ Connection closed by the server. Only emitted if the encryption handshake is com
 
 ### 'connected'
 
-Encryption handshake complete. From now on, it's your responsibility to handle disconnections and reconnect (see ['error'](#error)). You'll likely want to log on now (see [SteamUser#logOn](lib/handlers/user#logonlogondetails)).
+Encryption handshake complete. From now on, it's your responsibility to handle disconnections and reconnect (see ['error'](#error)). You'll likely want to log on now (see [SteamUser#logOn](lib/handlers/User#logonlogondetails)).
 
 ### 'logOnResponse'
 * [`CMsgClientLogonResponse`](https://github.com/SteamRE/SteamKit/blob/master/Resources/Protobufs/steamclient/steammessages_clientserver_login.proto)
