@@ -25,13 +25,13 @@
     },
     "scripts": {
         "lint": "eslint lib/** --fix",
-        "minify": "rimraf dist/* & gulp",
-        "resource": "git clone https://github.com/seishun/node-steam-resources.git steam-resources"
+        "minify": "rimraf dist/* & gulp"
     },
     "dependencies": {
         "adm-zip": "^0.4.11",
         "buffer-crc32": "^0.2.13",
         "bytebuffer": "^5.0.1",
+        "protobufjs": "^4.1.3",
         "steam-crypto": "^0.0.1"
     },
     "devDependencies": {
