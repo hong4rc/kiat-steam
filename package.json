@@ -15,9 +15,8 @@
     "license": "MIT",
     "files": [
         "dist/**.js",
-        "steam-resources/**.proto",
-        "steam-resources/**.steamd",
-        "steam-resources/**.js"
+        "dist/**.proto",
+        "dist/**.steamd"
     ],
     "main": "./dist/index",
     "repository": {

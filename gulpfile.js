@@ -1,22 +1,21 @@
-let gulp = require('gulp');
-let minify = require('gulp-minify');
+'use strict';
 
+const gulp = require('gulp');
+const minify = require('gulp-minify');
 
-let paths = {
+const paths = {
     js: 'lib/**/*.js'
 };
-let jsOpt = {
+const jsOpt = {
     ext: {min: '.js'},
     noSource: true
 };
-gulp.task('minify', function () {
-    return gulp.src(paths.js)
-        .pipe(minify(jsOpt))
-        .pipe(gulp.dest('dist/'));
-
-});
+gulp.task('minify', () => gulp.src(paths.js)
+    .pipe(minify(jsOpt))
+    .pipe(gulp.dest('dist/')));
+gulp.task('copy', () => gulp.src(['lib/**/*.proto', 'lib/**/*.steamd']).pipe(gulp.dest('dist/')));
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['minify'], () => {
-    console.log('Done')
+gulp.task('default', ['minify', 'copy'], () => {
+    console.log('Done');
 });

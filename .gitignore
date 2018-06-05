@@ -12,7 +12,8 @@ yarn.lock
 yarn-error.log
 
 #Steam resources
-steam-resources/
+lib/resources/protobufs/
+lib/resources/steam_language/
 
 #Gulp build
 dist/
