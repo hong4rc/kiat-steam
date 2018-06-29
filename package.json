@@ -25,6 +25,7 @@
     },
     "scripts": {
         "lint": "eslint lib/** --fix",
+        "servers": "node getListServer.js",
         "minify": "rimraf dist/* & gulp"
     },
     "dependencies": {
