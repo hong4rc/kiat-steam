@@ -7,5 +7,9 @@ yarn.lock
 
 # Other
 .gitignore
-package.json
+*.json
 README.md
+
+# Resources
+/lib/resources/protobufs
+/lib/resources/steam_language
