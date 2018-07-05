@@ -20,9 +20,9 @@ client.on('connected', () => {
 });
 client.on('servers', servers => {
     servers.sort((a, b) => {
-        let aHost = a.host.split('.').map(a=>a.padStart(3, ' ')).join('.');
-        let bHost = b.host.split('.').map(a=>a.padStart(3, ' ')).join('.');
-        return aHost.localeCompare(bHost) || a.port > b.port;
+        let aHost = a.host.split('.').map(a => a.padStart(3, ' ')).join('.');
+        let bHost = b.host.split('.').map(a => a.padStart(3, ' ')).join('.');
+        return aHost.localeCompare(bHost) || (a.port > b.port ? 1 : -1);
     });
     console.log(servers);
     client.disconnect();
