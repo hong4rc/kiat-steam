@@ -10,16 +10,19 @@ const MY_INDENT = 4;
 
 client.connect();
 
+const account_name = process.env.USER_NAME || 'your_username';
+const password = process.env.PASS_WORD || 'your_password';
+const two_factor_code = process.env.CODE || 'factor_code_if_need';
 client.on('connected', () => {
     steamUser.logOn({
-        account_name: 'your_username',
+        account_name,
 
         /*
         login_key: 'your_login_key',
         /*/
-        password: 'your_password',
+        password,
+        two_factor_code,
         should_remember_password: true,
-        two_factor_code: 'factor_code_if_need',
 
         //* /
     });
