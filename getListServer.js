@@ -6,8 +6,6 @@ const client = new Steam.SteamClient();
 const steamUser = new Steam.SteamUser(client);
 
 const MAX_NUM_IP = 3;
-const COMPARE_BIG = 1;
-const COMPARE_SMALL = -1;
 const MY_INDENT = 4;
 
 client.connect();
@@ -30,7 +28,7 @@ client.on('servers', servers => {
     servers.sort((a, b) => {
         const aHost = a.host.split('.').map(a => a.padStart(MAX_NUM_IP, ' ')).join('.');
         const bHost = b.host.split('.').map(a => a.padStart(MAX_NUM_IP, ' ')).join('.');
-        return aHost.localeCompare(bHost) || (a.port > b.port ? COMPARE_BIG : -COMPARE_SMALL);
+        return aHost.localeCompare(bHost) || String(a.port).localeCompare(String(b.port));
     });
     client.disconnect();
     fs.writeFileSync('./lib/servers.json', JSON.stringify(servers, null, MY_INDENT));
