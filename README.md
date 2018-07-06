@@ -1,8 +1,8 @@
-# Steam for Node.js
+# Steam for Node.js [![License](https://img.shields.io/github/license/Hongarc/kiat-steam.svg)](LICENSE)
+[![CodeFactor](https://www.codefactor.io/repository/github/hongarc/kiat-steam/badge)](https://www.codefactor.io/repository/github/hongarc/kiat-steam)
+[![Build Status](https://travis-ci.org/Hongarc/kiat-steam.svg?branch=master)](https://travis-ci.org/Hongarc/kiat-steam)
 
 [![NPM version](https://img.shields.io/npm/v/kiat-steam.svg)](https://npmjs.org/package/kiat-steam "View this project  on NPM")
-[![License](https://img.shields.io/github/license/Hongarc/kiat-steam.svg)](LICENSE)
-[![Build Status](https://travis-ci.org/Hongarc/kiat-steam.svg?branch=master)](https://travis-ci.org/Hongarc/kiat-steam)
 [![Dependency Status](https://david-dm.org/Hongarc/kiat-steam.svg)](https://david-dm.org/Hongarc/kiat-steam)
 [![DevDependency Status](https://david-dm.org/Hongarc/kiat-steam/dev-status.svg)](https://david-dm.org/Hongarc/kiat-steam?type=dev)
 
