@@ -34,5 +34,5 @@ client.on('servers', servers => {
         return aHost.localeCompare(bHost) || String(a.port).localeCompare(String(b.port));
     });
     client.disconnect();
-    fs.writeFileSync('./lib/servers.json', JSON.stringify(servers, null, MY_INDENT));
+    fs.writeFileSync('./lib/servers.json', JSON.stringify(servers, null, MY_INDENT).replace(/\n/g, '\r\n'));
 });
