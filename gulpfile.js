@@ -3,8 +3,11 @@
 const gulp = require('gulp');
 const minify = require('gulp-minify');
 
+const DIST = 'dist/';
+
 const paths = {
     js: 'lib/**/*.js',
+    raw : ['lib/**/*.proto', 'lib/**/*.steamd', 'lib/**/*.json'],
 };
 const jsOpt = {
     ext: {min: '.js'},
@@ -12,8 +15,8 @@ const jsOpt = {
 };
 gulp.task('minify', () => gulp.src(paths.js)
     .pipe(minify(jsOpt))
-    .pipe(gulp.dest('dist/')));
-gulp.task('copy', () => gulp.src(['lib/**/*.proto', 'lib/**/*.steamd', 'lib/**/*.json']).pipe(gulp.dest('dist/')));
+    .pipe(gulp.dest(DIST)));
+gulp.task('copy', () => gulp.src(paths.raw).pipe(gulp.dest(DIST)));
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['minify', 'copy']);
+gulp.task('default', gulp.parallel('minify', 'copy'));
