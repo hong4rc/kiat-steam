@@ -7,7 +7,7 @@ const DIST = 'dist/';
 
 const paths = {
     js: 'lib/**/*.js',
-    raw : ['lib/**/*.proto', 'lib/**/*.steamd', 'lib/**/*.json'],
+    raw: ['lib/**/*.proto', 'lib/**/*.steamd', 'lib/**/*.json'],
 };
 const jsOpt = {
     ext: {min: '.js'},
